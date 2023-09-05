@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>700</width>
-    <height>437</height>
+    <height>431</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -24,8 +24,20 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0" colspan="2">
+    <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1000</width>
+        <height>1000</height>
+       </size>
+      </property>
       <property name="styleSheet">
        <string notr="true">QTabBar {
 	background-color: rgb(39, 39, 39);     
@@ -51,7 +63,7 @@ QTabBar::tab:selected {
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
-        <string>Tab 1</string>
+        <string>Настройки Лаунчера</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_2">
         <property name="leftMargin">
@@ -71,8 +83,14 @@ QTabBar::tab:selected {
         </property>
         <item row="0" column="0">
          <widget class="QFrame" name="frame">
+          <property name="maximumSize">
+           <size>
+            <width>700</width>
+            <height>700</height>
+           </size>
+          </property>
           <property name="styleSheet">
-           <string notr="true">image: url(C:/Users/ASUS/Desktop/res/4.png);</string>
+           <string notr="true">image: url(C:/Users/ASUS/Desktop/res/baground/Default/16.png);</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::StyledPanel</enum>
@@ -80,9 +98,15 @@ QTabBar::tab:selected {
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
           </property>
-          <layout class="QGridLayout" name="gridLayout_4">
+          <layout class="QFormLayout" name="formLayout">
            <item row="0" column="0">
             <widget class="QPushButton" name="pushButton_2">
+             <property name="maximumSize">
+              <size>
+               <width>300</width>
+               <height>35</height>
+              </size>
+             </property>
              <property name="sizeIncrement">
               <size>
                <width>0</width>
@@ -104,10 +128,11 @@ QTabBar::tab:selected {
              </property>
              <property name="styleSheet">
               <string notr="true">image: url();
-background-color: rgb(0, 0, 0, 50);</string>
+background-color: rgb(0, 0, 0, 50);
+border-radius: 10px;</string>
              </property>
              <property name="text">
-              <string> Настройки  </string>
+              <string> Настройки Лаунчера</string>
              </property>
              <property name="icon">
               <iconset>
@@ -125,6 +150,304 @@ background-color: rgb(0, 0, 0, 50);</string>
              </property>
             </widget>
            </item>
+           <item row="0" column="1">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>70</width>
+               <height>30</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>10</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 0, 0, 50);
+</string>
+             </property>
+             <property name="text">
+              <string>Язык (Language):</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="comboBox">
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 255, 255, 50);</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>English</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Русский</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Український</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="5" column="0">
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>300</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="5" column="1">
+            <widget class="QTextEdit" name="textEdit">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 0, 0, 50);
+</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <spacer name="verticalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>5</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 0, 0, 50);
+</string>
+             </property>
+             <property name="text">
+              <string>Выделение памяти:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QSlider" name="horizontalSlider">
+             <property name="minimumSize">
+              <size>
+               <width>350</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 0, 0, 50);
+
+</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0" colspan="2">
+            <spacer name="verticalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="11" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 0, 0, 50);
+</string>
+             </property>
+             <property name="text">
+              <string>Выбор Java:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="1">
+            <widget class="QComboBox" name="comboBox_2">
+             <property name="minimumSize">
+              <size>
+               <width>350</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 255, 255, 50);
+</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>По умолчанию</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="12" column="0" colspan="2">
+            <spacer name="verticalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="14" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 0, 0, 50);</string>
+             </property>
+             <property name="text">
+              <string>Консоль разработчкиа:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="1">
+            <widget class="QCheckBox" name="checkBox">
+             <property name="minimumSize">
+              <size>
+               <width>15</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>15</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 0, 0, 50);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
           </layout>
          </widget>
         </item>
@@ -132,7 +455,7 @@ background-color: rgb(0, 0, 0, 50);</string>
       </widget>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
-        <string>Tab 2</string>
+        <string>Настройки Minecraft</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_3">
         <property name="leftMargin">
@@ -152,8 +475,14 @@ background-color: rgb(0, 0, 0, 50);</string>
         </property>
         <item row="0" column="0">
          <widget class="QFrame" name="frame_2">
+          <property name="maximumSize">
+           <size>
+            <width>1000</width>
+            <height>1000</height>
+           </size>
+          </property>
           <property name="styleSheet">
-           <string notr="true">image: url(C:/Users/ASUS/Desktop/res/4.png);</string>
+           <string notr="true">image: url(C:/Users/ASUS/Desktop/res/baground/Default/16.png);</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::StyledPanel</enum>
@@ -161,42 +490,21 @@ background-color: rgb(0, 0, 0, 50);</string>
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
           </property>
-          <layout class="QGridLayout" name="gridLayout_5">
-           <item row="3" column="0">
-            <widget class="QRadioButton" name="radioButton">
-             <property name="styleSheet">
-              <string notr="true">image: url();
-background-color: rgb(255, 255, 255, 50);</string>
-             </property>
-             <property name="text">
-              <string>RadioButton</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QCheckBox" name="checkBox">
-             <property name="styleSheet">
-              <string notr="true">image: url();
-background-color: rgb(255, 255, 255, 50);</string>
-             </property>
-             <property name="text">
-              <string>CheckBox</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QCheckBox" name="checkBox_2">
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(255, 255, 255, 50);
-image: url();</string>
-             </property>
-             <property name="text">
-              <string>CheckBox</string>
-             </property>
-            </widget>
-           </item>
+          <layout class="QFormLayout" name="formLayout_2">
            <item row="0" column="0">
             <widget class="QPushButton" name="pushButton_3">
+             <property name="minimumSize">
+              <size>
+               <width>230</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>300</width>
+               <height>35</height>
+              </size>
+             </property>
              <property name="sizeIncrement">
               <size>
                <width>0</width>
@@ -218,10 +526,11 @@ image: url();</string>
              </property>
              <property name="styleSheet">
               <string notr="true">image: url();
-background-color: rgb(0, 0, 0, 50);</string>
+background-color: rgb(0, 0, 0, 50);
+border-radius: 10px;</string>
              </property>
              <property name="text">
-              <string> Настройки  </string>
+              <string> Настройки Minecraft</string>
              </property>
              <property name="icon">
               <iconset>
@@ -239,14 +548,344 @@ background-color: rgb(0, 0, 0, 50);</string>
              </property>
             </widget>
            </item>
-           <item row="4" column="0">
-            <widget class="QRadioButton" name="radioButton_2">
+           <item row="0" column="1">
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="0" colspan="2">
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>10</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="minimumSize">
+              <size>
+               <width>230</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>230</width>
+               <height>25</height>
+              </size>
+             </property>
              <property name="styleSheet">
               <string notr="true">image: url();
-background-color: rgb(255, 255, 255, 50);</string>
+background-color: rgb(255, 0, 0, 50);
+</string>
              </property>
              <property name="text">
-              <string>RadioButton</string>
+              <string>Директория:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QTextEdit" name="textEdit_2">
+             <property name="minimumSize">
+              <size>
+               <width>300</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>500</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 0, 0, 50);
+</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>250</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="4" column="1">
+            <widget class="QPushButton" name="pushButton">
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 0, 0, 50);
+</string>
+             </property>
+             <property name="text">
+              <string>Обзор файлов:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <spacer name="verticalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>10</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_6">
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 0, 0, 50);
+</string>
+             </property>
+             <property name="text">
+              <string>Делать бэкапы:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QCheckBox" name="checkBox_2">
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 0, 0, 50);
+</string>
+             </property>
+             <property name="text">
+              <string>Да</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0" colspan="2">
+            <spacer name="verticalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>10</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLabel" name="label_7">
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 0, 0, 50);
+</string>
+             </property>
+             <property name="text">
+              <string>Частота бэкапа</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QComboBox" name="comboBox_3">
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 255, 255, 50);
+</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>Раз в сутки перед запуском игры</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Каждый раз перед запуском игры</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="11" column="0" colspan="2">
+            <spacer name="verticalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>5</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="13" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="minimumSize">
+              <size>
+               <width>185</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>185</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 0, 0, 50);
+</string>
+             </property>
+             <property name="text">
+              <string>Максимальный размер:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="1">
+            <widget class="QTextEdit" name="textEdit_3">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 0, 0, 50);
+</string>
+             </property>
+            </widget>
+           </item>
+           <item row="15" column="0" colspan="2">
+            <spacer name="verticalSpacer_10">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>5</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="17" column="0">
+            <widget class="QLabel" name="label_9">
+             <property name="minimumSize">
+              <size>
+               <width>185</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>185</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 0, 0, 50);
+</string>
+             </property>
+             <property name="text">
+              <string>Время хранения бэкапа:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="17" column="1">
+            <widget class="QTextEdit" name="textEdit_4">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url();
+background-color: rgb(255, 0, 0, 50);
+</string>
              </property>
             </widget>
            </item>
