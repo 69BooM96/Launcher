@@ -1,13 +1,15 @@
 import subprocess
 import sys
-import os
+from pathlib import Path
 import easygui
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QFileSystemModel
 from PyQt5 import QtCore, QtGui, QtWidgets
+import zipfile
+import os
+import shutil
 
 import launcher
-
 
 class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
     def __init__(self):
@@ -17,6 +19,59 @@ class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
         self.pushButton_3.clicked.connect(self.open_folder)
         self.radioButton.clicked.connect(self.white)
         self.radioButton_2.clicked.connect(self.dark)
+        self.pushButton_7.clicked.connect(self.texture)
+        self.pushButton_8.clicked.connect(self.shaders)
+        self.pushButton_6.clicked.connect(self.mods)
+        self.pushButton_19.clicked.connect(self.open_jar)
+        self.pushButton_18.clicked.connect(self.delete_jar)
+
+    def shaders(self):
+        self.label_6.setText("Шейдеры")
+
+    def texture(self):
+        self.label_6.setText("Текстуры")
+
+    def mods(self):
+        self.label_6.setText("Моды")
+
+    def open_jar(self):
+        input_file = easygui.fileopenbox(title='Import file',default='*',filetypes=["*.jar", "*.zip"])
+        file_path = Path(input_file)
+        Mod = False
+        Texture = False
+        file_open = zipfile.ZipFile(input_file, "r")
+        for file_copy in file_open.infolist():
+            if file_copy.filename == "mcmod.info":
+                Mod = True
+
+            if file_copy.filename == "pack.mcmeta":
+                Texture = True
+
+
+        if Mod == False:
+            if Texture == True:
+                print("Texture")
+
+            if Texture == False:
+                print("Shaders")
+
+        if Mod == True:
+            print("Mod")
+            os.mkdir("./minecraft/imports")
+            file_open.extractall("./minecraft/imports")
+            file_zip = zipfile.ZipFile(file_path, "w")
+            for folder, subfolders, files in os.walk("./minecraft/imports"):
+                for file in files:
+                    file_zip.write(os.path.join(folder, file),
+                                   os.path.relpath(os.path.join(folder, file), "/minecraft/mods"),
+                                   compress_type=zipfile.ZIP_DEFLATED)
+            path = os.path.join(os.path.abspath(os.path.dirname(__file__)), './minecraft/imports')
+            shutil.rmtree(path)
+
+        file_open.close()
+
+    def delete_jar(self):
+        print("del")
 
     def dark(self):
         self.frame_2.setStyleSheet("background-color: rgba(49, 49, 49);")
@@ -157,7 +212,7 @@ class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
 
     def settings(self):
         #Start
-        print("Start")
+        print("x")
 
     def open_folder(self):
         directory = r".."
