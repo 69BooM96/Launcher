@@ -47,28 +47,53 @@ class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
             if file_copy.filename == "pack.mcmeta":
                 Texture = True
 
-
+            if file_copy.filename == "changelog.txt":
+                Mod = True
         if Mod == False:
             if Texture == True:
                 print("Texture")
+                os.mkdir("./minecraft/imports")
+
+                file_open.extractall("./minecraft/imports")
+                file_zip = zipfile.ZipFile(f"./minecraft/textures/" + file_path.name, "w")
+                for folder, subfolders, files in os.walk("./minecraft/imports"):
+                    for file in files:
+                        file_zip.write(os.path.join(folder, file),
+                                       os.path.relpath(os.path.join(folder, file), "./minecraft/imports"),
+                                       compress_type=zipfile.ZIP_STORED)
+                path = os.path.join(os.path.abspath(os.path.dirname(__file__)), './minecraft/imports')
+                shutil.rmtree(path)
+                file_open.close()
 
             if Texture == False:
                 print("Shaders")
+                os.mkdir("./minecraft/imports")
+
+                file_open.extractall("./minecraft/imports")
+                file_zip = zipfile.ZipFile(f"./minecraft/shaders/" + file_path.name, "w")
+                for folder, subfolders, files in os.walk("./minecraft/imports"):
+                    for file in files:
+                        file_zip.write(os.path.join(folder, file),
+                                       os.path.relpath(os.path.join(folder, file), "./minecraft/imports"),
+                                       compress_type=zipfile.ZIP_STORED)
+                path = os.path.join(os.path.abspath(os.path.dirname(__file__)), './minecraft/imports')
+                shutil.rmtree(path)
+                file_open.close()
 
         if Mod == True:
             print("Mod")
             os.mkdir("./minecraft/imports")
+
             file_open.extractall("./minecraft/imports")
-            file_zip = zipfile.ZipFile(file_path, "w")
+            file_zip = zipfile.ZipFile(f"./minecraft/mods/" + file_path.name, "w")
             for folder, subfolders, files in os.walk("./minecraft/imports"):
                 for file in files:
                     file_zip.write(os.path.join(folder, file),
-                                   os.path.relpath(os.path.join(folder, file), "/minecraft/mods"),
-                                   compress_type=zipfile.ZIP_DEFLATED)
+                                   os.path.relpath(os.path.join(folder, file), "./minecraft/imports"),
+                                   compress_type=zipfile.ZIP_STORED)
             path = os.path.join(os.path.abspath(os.path.dirname(__file__)), './minecraft/imports')
             shutil.rmtree(path)
-
-        file_open.close()
+            file_open.close()
 
     def delete_jar(self):
         print("del")
