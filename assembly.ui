@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>797</width>
+    <height>505</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(39, 39, 39);
+image: url(&quot;&quot;);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>5</number>
+    </property>
+    <property name="topMargin">
+     <number>9</number>
+    </property>
+    <property name="rightMargin">
+     <number>6</number>
+    </property>
+    <property name="bottomMargin">
+     <number>5</number>
+    </property>
+    <property name="spacing">
+     <number>7</number>
+    </property>
+    <item row="0" column="3">
+     <widget class="QLabel" name="label_7">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Сборка</string>
+      </property>
+      <property name="indent">
+       <number>10</number>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="3">
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(49, 49, 49);
+border-radius: 10px;
+color: rgb(230, 230, 230);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="3">
+     <widget class="QLabel" name="label_3">
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Название</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="5">
+     <widget class="QLabel" name="label_6">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Моды</string>
+      </property>
+      <property name="indent">
+       <number>10</number>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3" rowspan="9">
+     <widget class="QListView" name="listView_2">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0, 130);
+color: rgb(240, 255, 255);
+border-radius: 8px;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4" rowspan="10">
+     <widget class="QLabel" name="label">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>80</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>←
+</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="5" rowspan="9">
+     <widget class="QListView" name="listView">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0, 130);
+color: rgb(240, 255, 255);
+border-radius: 8px;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="3">
+     <widget class="QLabel" name="label_2">
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Версия</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="2">
+     <widget class="QComboBox" name="comboBox">
+      <property name="minimumSize">
+       <size>
+        <width>99</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    border-radius: 10px;
+    padding: 1px 18px 1px 3px;
+    min-width: 6em;
+	color: rgb(255, 255, 255);
+	
+}
+
+QComboBox:!editable, QComboBox::drop-down:editable {
+	background-color: rgba(0, 0, 0, 80);
+}
+
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+    background-color: rgba(49, 49, 49, 140);
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-left-color: darkgray;
+    border-left-style: solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+	image: url(C:/Users/студент.BestLaptop-ПК/Desktop/лаунчер/res/open.png);
+}
+
+QComboBox::down-arrow:on {
+    top: 0px;
+    left: 0px;
+}
+
+QComboBox QAbstractItemView {
+    border: 3px solid rgb(30, 30, 30);
+    selection-background-color: rgba(85, 170, 0, 94);
+	color: rgb(255, 255, 255);
+    border-radius: 10px;
+	background-color: rgba(59, 59, 59);
+}
+
+QComboBox:editable {
+	background-color: rgb(30, 30, 30);
+}
+
+QComboBox:on {
+    padding-bottom: 5px;
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" colspan="3">
+     <widget class="QLabel" name="label_4">
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Цвет</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0" colspan="2">
+     <widget class="QComboBox" name="comboBox_2">
+      <property name="minimumSize">
+       <size>
+        <width>99</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    border-radius: 10px;
+    padding: 1px 18px 1px 3px;
+    min-width: 6em;
+	color: rgb(255, 255, 255);
+	
+}
+
+QComboBox:!editable, QComboBox::drop-down:editable {
+	background-color: rgba(0, 0, 0, 80);
+}
+
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+    background-color: rgba(49, 49, 49, 140);
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-left-color: darkgray;
+    border-left-style: solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+	image: url(C:/Users/студент.BestLaptop-ПК/Desktop/лаунчер/res/open.png);
+}
+
+QComboBox::down-arrow:on {
+    top: 0px;
+    left: 0px;
+}
+
+QComboBox QAbstractItemView {
+    border: 3px solid rgb(30, 30, 30);
+    selection-background-color: rgba(85, 170, 0, 94);
+	color: rgb(255, 255, 255);
+    border-radius: 10px;
+	background-color: rgba(59, 59, 59);
+}
+
+QComboBox:editable {
+	background-color: rgb(30, 30, 30);
+}
+
+QComboBox:on {
+    padding-bottom: 5px;
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0" colspan="3">
+     <widget class="QLabel" name="label_5">
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Иконка</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0" colspan="2">
+     <widget class="QComboBox" name="comboBox_3">
+      <property name="minimumSize">
+       <size>
+        <width>99</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    border-radius: 10px;
+    padding: 1px 18px 1px 3px;
+    min-width: 6em;
+	color: rgb(255, 255, 255);
+	
+}
+
+QComboBox:!editable, QComboBox::drop-down:editable {
+	background-color: rgba(0, 0, 0, 80);
+}
+
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+    background-color: rgba(49, 49, 49, 140);
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-left-color: darkgray;
+    border-left-style: solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+	image: url(C:/Users/студент.BestLaptop-ПК/Desktop/лаунчер/res/open.png);
+}
+
+QComboBox::down-arrow:on {
+    top: 0px;
+    left: 0px;
+}
+
+QComboBox QAbstractItemView {
+    border: 3px solid rgb(30, 30, 30);
+    selection-background-color: rgba(85, 170, 0, 94);
+	color: rgb(255, 255, 255);
+    border-radius: 10px;
+	background-color: rgba(59, 59, 59);
+}
+
+QComboBox:editable {
+	background-color: rgb(30, 30, 30);
+}
+
+QComboBox:on {
+    padding-bottom: 5px;
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="9" column="0">
+     <widget class="QPushButton" name="pushButton">
+      <property name="minimumSize">
+       <size>
+        <width>96</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(240, 255, 255);
+background-color: rgba(85, 170, 0, 94);
+border-radius: 6px;</string>
+      </property>
+      <property name="text">
+       <string>Создать</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1" colspan="2">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="minimumSize">
+       <size>
+        <width>96</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(240, 255, 255);
+background-color: rgba(170, 0, 0, 124);
+border-radius: 6px;</string>
+      </property>
+      <property name="text">
+       <string>Отмена</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
