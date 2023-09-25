@@ -356,15 +356,6 @@ class Ui_MainWindow(object):
         self.gridLayout_6.addItem(spacerItem7, 0, 2, 1, 1)
         spacerItem8 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout_6.addItem(spacerItem8, 2, 2, 1, 2)
-        self.listView = QtWidgets.QListView(self.frame_3)
-        self.listView.setMinimumSize(QtCore.QSize(559, 307))
-        self.listView.setStyleSheet("image: url();\n"
-"background-color: rgb(0, 0, 0, 130);\n"
-"color: rgb(240, 255, 255);\n"
-"border-radius: 8px;\n"
-"")
-        self.listView.setObjectName("listView")
-        self.gridLayout_6.addWidget(self.listView, 0, 3, 1, 1)
         self.frame_5 = QtWidgets.QFrame(self.frame_3)
         self.frame_5.setMinimumSize(QtCore.QSize(0, 80))
         self.frame_5.setMaximumSize(QtCore.QSize(16777215, 80))
@@ -485,6 +476,15 @@ class Ui_MainWindow(object):
         self.pushButton_5.setObjectName("pushButton_5")
         self.gridLayout_8.addWidget(self.pushButton_5, 0, 5, 3, 1)
         self.gridLayout_6.addWidget(self.frame_5, 4, 0, 1, 4)
+        self.listWidget = QtWidgets.QListWidget(self.frame_3)
+        self.listWidget.setMinimumSize(QtCore.QSize(559, 307))
+        self.listWidget.setStyleSheet("image: url();\n"
+"background-color: rgb(0, 0, 0, 130);\n"
+"color: rgb(240, 255, 255);\n"
+"border-radius: 8px;\n"
+"")
+        self.listWidget.setObjectName("listWidget")
+        self.gridLayout_6.addWidget(self.listWidget, 0, 3, 1, 1)
         self.gridLayout_5.addWidget(self.frame_3, 0, 0, 1, 1)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         self.gridLayout_4.addWidget(self.scrollArea, 0, 0, 1, 1)
@@ -537,8 +537,9 @@ class Ui_MainWindow(object):
         self.pushButton_17.setStyleSheet("background-color: rgba(0, 0, 0, 0);")
         self.pushButton_17.setText("")
         icon13 = QtGui.QIcon()
-        icon13.addPixmap(QtGui.QPixmap("../res/старт.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon13.addPixmap(QtGui.QPixmap("res/reboot.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.pushButton_17.setIcon(icon13)
+        self.pushButton_17.setIconSize(QtCore.QSize(22, 22))
         self.pushButton_17.setObjectName("pushButton_17")
         self.gridLayout_11.addWidget(self.pushButton_17, 1, 5, 1, 1)
         spacerItem14 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -555,16 +556,16 @@ class Ui_MainWindow(object):
         self.label_4.setIndent(13)
         self.label_4.setObjectName("label_4")
         self.gridLayout_11.addWidget(self.label_4, 0, 1, 1, 5)
+        self.pushButton_9 = QtWidgets.QPushButton(self.frame_8)
+        self.pushButton_9.setStyleSheet("background-color: rgba(0, 0, 0, 0);")
+        self.pushButton_9.setText("")
+        icon14 = QtGui.QIcon()
+        icon14.addPixmap(QtGui.QPixmap("res/старт.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.pushButton_9.setIcon(icon14)
+        self.pushButton_9.setIconSize(QtCore.QSize(20, 20))
+        self.pushButton_9.setObjectName("pushButton_9")
+        self.gridLayout_11.addWidget(self.pushButton_9, 1, 4, 1, 1)
         self.gridLayout_13.addWidget(self.frame_8, 1, 0, 1, 1)
-        self.listView_3 = QtWidgets.QListView(self.frame)
-        self.listView_3.setStyleSheet("image: url();\n"
-"background-color: rgb(0, 0, 0, 130);\n"
-"color: rgb(240, 255, 255);\n"
-"border-radius: 15px;\n"
-"")
-        self.listView_3.setFrameShape(QtWidgets.QFrame.NoFrame)
-        self.listView_3.setObjectName("listView_3")
-        self.gridLayout_13.addWidget(self.listView_3, 5, 0, 2, 1)
         self.frame_9 = QtWidgets.QFrame(self.frame)
         self.frame_9.setStyleSheet("image: url();\n"
 "background-color: rgb(0, 0, 0, 110);\n"
@@ -624,9 +625,9 @@ class Ui_MainWindow(object):
         self.pushButton_8 = QtWidgets.QPushButton(self.frame_9)
         self.pushButton_8.setStyleSheet("background-color: rgba(0, 0, 0, 0);")
         self.pushButton_8.setText("")
-        icon14 = QtGui.QIcon()
-        icon14.addPixmap(QtGui.QPixmap("res/version.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
-        self.pushButton_8.setIcon(icon14)
+        icon15 = QtGui.QIcon()
+        icon15.addPixmap(QtGui.QPixmap("res/version.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.pushButton_8.setIcon(icon15)
         self.pushButton_8.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_8.setObjectName("pushButton_8")
         self.gridLayout_14.addWidget(self.pushButton_8, 0, 4, 1, 1)
@@ -637,16 +638,14 @@ class Ui_MainWindow(object):
         self.pushButton_6.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_6.setObjectName("pushButton_6")
         self.gridLayout_14.addWidget(self.pushButton_6, 0, 7, 1, 1)
+        self.pushButton_11 = QtWidgets.QPushButton(self.frame_9)
+        self.pushButton_11.setStyleSheet("background-color: rgba(0, 0, 0, 0);")
+        self.pushButton_11.setText("")
+        self.pushButton_11.setIcon(icon13)
+        self.pushButton_11.setIconSize(QtCore.QSize(22, 22))
+        self.pushButton_11.setObjectName("pushButton_11")
+        self.gridLayout_14.addWidget(self.pushButton_11, 2, 7, 1, 1)
         self.gridLayout_13.addWidget(self.frame_9, 1, 2, 1, 1)
-        self.listView_2 = QtWidgets.QListView(self.frame)
-        self.listView_2.setStyleSheet("image: url();\n"
-"background-color: rgb(0, 0, 0, 110);\n"
-"color: rgb(240, 255, 255);\n"
-"border-radius: 15px;\n"
-"")
-        self.listView_2.setFrameShape(QtWidgets.QFrame.NoFrame)
-        self.listView_2.setObjectName("listView_2")
-        self.gridLayout_13.addWidget(self.listView_2, 6, 2, 1, 1)
         spacerItem16 = QtWidgets.QSpacerItem(19, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout_13.addItem(spacerItem16, 6, 1, 1, 1)
         spacerItem17 = QtWidgets.QSpacerItem(20, 5, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
@@ -655,6 +654,34 @@ class Ui_MainWindow(object):
         self.gridLayout_13.addItem(spacerItem18, 7, 0, 1, 3)
         spacerItem19 = QtWidgets.QSpacerItem(20, 13, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         self.gridLayout_13.addItem(spacerItem19, 2, 0, 1, 3)
+        self.listWidget_2 = QtWidgets.QListWidget(self.frame)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.listWidget_2.setFont(font)
+        self.listWidget_2.setStyleSheet("image: url();\n"
+"background-color: rgb(0, 0, 0, 110);\n"
+"color: rgb(240, 255, 255);\n"
+"border-radius: 15px;\n"
+"")
+        self.listWidget_2.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.listWidget_2.setObjectName("listWidget_2")
+        self.gridLayout_13.addWidget(self.listWidget_2, 6, 2, 1, 1)
+        self.listWidget_3 = QtWidgets.QListWidget(self.frame)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.listWidget_3.setFont(font)
+        self.listWidget_3.setStyleSheet("image: url();\n"
+"background-color: rgb(0, 0, 0, 130);\n"
+"color: rgb(240, 255, 255);\n"
+"border-radius: 15px;\n"
+"")
+        self.listWidget_3.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.listWidget_3.setObjectName("listWidget_3")
+        self.gridLayout_13.addWidget(self.listWidget_3, 5, 0, 2, 1)
         self.gridLayout_10.addWidget(self.frame, 0, 1, 1, 1)
         self.tabWidget.addTab(self.tab_3, "")
         self.tab_2 = QtWidgets.QWidget()
@@ -725,14 +752,22 @@ class Ui_MainWindow(object):
         self.frame_4.setObjectName("frame_4")
         self.gridLayout = QtWidgets.QGridLayout(self.frame_4)
         self.gridLayout.setObjectName("gridLayout")
-        self.listView_4 = QtWidgets.QListView(self.frame_4)
-        self.listView_4.setStyleSheet("image: url();\n"
+        self.textBrowser_3 = QtWidgets.QTextBrowser(self.frame_4)
+        self.textBrowser_3.setStyleSheet("image: url();\n"
 "background-color: rgb(0, 0, 0, 130);\n"
 "color: rgb(240, 255, 255);\n"
 "border-radius: 15px;\n"
 "")
-        self.listView_4.setObjectName("listView_4")
-        self.gridLayout.addWidget(self.listView_4, 0, 0, 1, 1)
+        self.textBrowser_3.setObjectName("textBrowser_3")
+        self.gridLayout.addWidget(self.textBrowser_3, 0, 1, 1, 1)
+        self.listWidget_4 = QtWidgets.QListWidget(self.frame_4)
+        self.listWidget_4.setStyleSheet("image: url();\n"
+"background-color: rgb(0, 0, 0, 130);\n"
+"color: rgb(240, 255, 255);\n"
+"border-radius: 15px;\n"
+"")
+        self.listWidget_4.setObjectName("listWidget_4")
+        self.gridLayout.addWidget(self.listWidget_4, 0, 0, 1, 1)
         self.gridLayout_12.addWidget(self.frame_4, 0, 0, 8, 1)
         spacerItem20 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.gridLayout_12.addItem(spacerItem20, 6, 1, 1, 1)
@@ -763,14 +798,21 @@ class Ui_MainWindow(object):
         self.frame_10.setObjectName("frame_10")
         self.gridLayout_15 = QtWidgets.QGridLayout(self.frame_10)
         self.gridLayout_15.setObjectName("gridLayout_15")
-        self.listView_5 = QtWidgets.QListView(self.frame_10)
-        self.listView_5.setStyleSheet("image: url();\n"
+        self.textBrowser_2 = QtWidgets.QTextBrowser(self.frame_10)
+        self.textBrowser_2.setStyleSheet("image: url();\n"
+"background-color: rgb(0, 0, 0, 130);\n"
+"color: rgb(240, 255, 255);\n"
+"border-radius: 15px;")
+        self.textBrowser_2.setObjectName("textBrowser_2")
+        self.gridLayout_15.addWidget(self.textBrowser_2, 0, 1, 1, 1)
+        self.listWidget_5 = QtWidgets.QListWidget(self.frame_10)
+        self.listWidget_5.setStyleSheet("image: url();\n"
 "background-color: rgb(0, 0, 0, 130);\n"
 "color: rgb(240, 255, 255);\n"
 "border-radius: 15px;\n"
 "")
-        self.listView_5.setObjectName("listView_5")
-        self.gridLayout_15.addWidget(self.listView_5, 0, 0, 1, 1)
+        self.listWidget_5.setObjectName("listWidget_5")
+        self.gridLayout_15.addWidget(self.listWidget_5, 0, 0, 1, 1)
         self.gridLayout_9.addWidget(self.frame_10, 0, 0, 6, 1)
         spacerItem21 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.gridLayout_9.addItem(spacerItem21, 4, 2, 1, 1)
@@ -836,7 +878,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
-        self.tabWidget_2.setCurrentIndex(0)
+        self.tabWidget_2.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

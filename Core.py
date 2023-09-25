@@ -24,6 +24,11 @@ class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
         self.pushButton_6.clicked.connect(self.mods)
         self.pushButton_19.clicked.connect(self.open_jar)
         self.pushButton_18.clicked.connect(self.delete_jar)
+        self.pushButton_17.clicked.connect(self.delete_jar)
+        self.pushButton_11.clicked.connect(self.update_mod_list)
+        self.pushButton_9.clicked.connect(self.delete_jar)
+        self.update_mod_list()
+        self.update_mod_list2()
 
     def shaders(self):
         self.label_6.setText("Шейдеры")
@@ -55,6 +60,11 @@ class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
                 os.mkdir("./minecraft/imports")
 
                 file_open.extractall("./minecraft/imports")
+                file_inf = open("./minecraft/imports/pack.mcmeta", "r")
+                file_info = file_inf.read()
+                file_assembly = open(f"./minecraft/info/textures/" + file_path.name, "w")
+                file_assembly.write(file_info)
+                file_inf.close()
                 file_zip = zipfile.ZipFile(f"./minecraft/textures/" + file_path.name, "w")
                 for folder, subfolders, files in os.walk("./minecraft/imports"):
                     for file in files:
@@ -81,10 +91,17 @@ class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
                 file_open.close()
 
         if Mod == True:
+            if Texture == True:
+                print("Mod Texture!")
             print("Mod")
             os.mkdir("./minecraft/imports")
 
             file_open.extractall("./minecraft/imports")
+            file_inf = open("./minecraft/imports/mcmod.info", "r")
+            file_info = file_inf.read()
+            file_assembly = open(f"./minecraft/info/mods/" + file_path.name, "w")
+            file_assembly.write(file_info)
+            file_inf.close()
             file_zip = zipfile.ZipFile(f"./minecraft/mods/" + file_path.name, "w")
             for folder, subfolders, files in os.walk("./minecraft/imports"):
                 for file in files:
@@ -97,6 +114,31 @@ class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
 
     def delete_jar(self):
         print("del")
+
+    def info_list2(self):
+        info_list = self.listWidget_5.currentItem().text()
+        print(info_list)
+
+    def update_mod_list(self):
+        self.listWidget_5.doubleClicked.connect(self.delete_jar)
+        self.listWidget_5.clear()
+        update = os.listdir("minecraft/mods")
+        for mod_list in update:
+            self.listWidget_5.addItem(mod_list)
+
+    #Mod list 2
+    def info_list3(self):
+        info_list = self.listWidget_5.currentItem().text()
+        self.textBrowser_2.setText(info_list)
+
+
+    def update_mod_list2(self):
+        self.listWidget_3.doubleClicked.connect(self.delete_jar)
+        self.listWidget_3.clear()
+        update = os.listdir("minecraft/mods")
+        for mod_list in update:
+            self.listWidget_3.addItem(mod_list)
+
 
     def dark(self):
         self.frame_2.setStyleSheet("background-color: rgba(49, 49, 49);")
