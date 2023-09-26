@@ -25,6 +25,7 @@ class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
         self.pushButton_19.clicked.connect(self.open_jar)
         self.pushButton_18.clicked.connect(self.delete_jar)
         self.pushButton_17.clicked.connect(self.delete_jar)
+        self.pushButton_10.clicked.connect(self.assembly)
         self.pushButton_11.clicked.connect(self.update_mod_list)
         self.pushButton_9.clicked.connect(self.delete_jar)
         self.update_mod_list()
@@ -33,6 +34,9 @@ class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
 
     def start_g(self):
         None
+
+    def assembly(self):
+        os.startfile("assembly_Core.py")
 
     def shaders(self):
         self.label_6.setText("Шейдеры")
