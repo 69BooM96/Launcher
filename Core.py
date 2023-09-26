@@ -29,6 +29,10 @@ class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
         self.pushButton_9.clicked.connect(self.delete_jar)
         self.update_mod_list()
         self.update_mod_list2()
+        self.start_g()
+
+    def start_g(self):
+        None
 
     def shaders(self):
         self.label_6.setText("Шейдеры")

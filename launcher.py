@@ -69,7 +69,7 @@ class Ui_MainWindow(object):
         self.label_3 = QtWidgets.QLabel(self.frame_6)
         self.label_3.setGeometry(QtCore.QRect(0, 0, 41, 41))
         self.label_3.setMinimumSize(QtCore.QSize(0, 0))
-        self.label_3.setStyleSheet("image: url(C:/Users/студент.BestLaptop-ПК/Pictures/аватарка - копия.png);")
+        self.label_3.setStyleSheet("image: url(аватарка - копия.png);")
         self.label_3.setText("")
         self.label_3.setObjectName("label_3")
         self.pushButton_15 = QtWidgets.QPushButton(self.frame_6)
@@ -180,7 +180,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QComboBox::down-arrow {\n"
-"    image: url(C:/Users/студент.BestLaptop-ПК/Desktop/лаунчер/res/open.png);\n"
+"    image: url(res/open.png);\n"
 "}\n"
 "\n"
 "QComboBox::down-arrow:on {\n"
@@ -409,7 +409,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QComboBox::down-arrow {\n"
-"    image: url(C:/Users/студент.BestLaptop-ПК/Desktop/лаунчер/res/open.png);\n"
+"    image: url(res/open.png);\n"
 "}\n"
 "\n"
 "QComboBox::down-arrow:on {\n"
