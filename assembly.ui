@@ -161,9 +161,160 @@ QTabBar::tab:selected {
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(0, 0, 0, 130);
-color: rgb(240, 255, 255);
-border-radius: 8px;</string>
+           <string notr="true">QScrollBar:horizontal {
+	border: none;
+    background: rgb(16, 16, 16);
+    height: 17px;
+    margin: 2px -18 2px -18;
+}
+
+QScrollBar::handle:horizontal {
+	background-color: rgb(60, 60, 60);
+    min-height: 18px;
+	border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal:hover{	
+	background-color: rgb(70, 70, 70);
+}
+QScrollBar::handle:horizontal:pressed {	
+	background-color: rgb(79, 79, 79);
+}
+
+QScrollBar::add-line:horizontal {
+    background: none;
+    width: 26px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::add-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+
+QScrollBar::sub-line:horizontal {
+    background: none;
+    width: 26px;
+    subcontrol-position: top left;
+    subcontrol-origin: margin;
+    position: absolute;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
+/* VERTICAL SCROLLBAR */
+ QScrollBar:vertical {
+	border: none;
+    background: rgb(16, 16, 16);
+    width: 18px;
+    margin: -18px 2 -18px 2;
+	border-radius: 0px;
+ }
+
+/*  HANDLE BAR VERTICAL */
+QScrollBar::handle:vertical {	
+	background-color: rgb(60, 60, 60);
+	min-height: 18px;
+	border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover{	
+	background-color: rgb(70, 70, 70);
+}
+QScrollBar::handle:vertical:pressed {	
+	background-color: rgb(79, 79, 79);
+}
+
+/* BTN TOP - SCROLLBAR */
+QScrollBar::sub-line:vertical {
+	border: none;
+	background-color: none;
+	height: none;
+	border-top-left-radius: none;
+	border-top-right-radius: none;
+	subcontrol-position: none;
+	subcontrol-origin: none;
+}
+QScrollBar::sub-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::sub-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* BTN BOTTOM - SCROLLBAR */
+QScrollBar::add-line:vertical {
+	border: none;
+	background-color: none;
+	height: none;
+	border-bottom-left-radius: none;
+	border-bottom-right-radius: none;
+	subcontrol-position: none;
+	subcontrol-origin: none;
+}
+QScrollBar::add-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::add-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+/* COLOR */
+QListWidget {
+	background-color: rgb(0, 0, 0, 130);
+	color: rgb(240, 255, 255);
+	border-radius: 8px;
+}
+
+QListWidget {
+    show-decoration-selected: none; /* make the selection span the entire width of the view */
+	outline: none;
+}
+
+QListWidget::item:alternate {
+    background: none;
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:selected {
+    border: none;
+	color: rgb(240, 255, 255);
+	outline: none;
+}
+
+QListWidget::item:selected:!active {
+	background: none;
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:selected:active {
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:hover {
+    background: rgba(255, 255, 255, 39);
+	border: -2px solid rgb(0, 0, 0, 0);
+	border-radius: 8px;
+}</string>
           </property>
          </widget>
         </item>
@@ -176,9 +327,160 @@ border-radius: 8px;</string>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(0, 0, 0, 130);
-color: rgb(240, 255, 255);
-border-radius: 8px;</string>
+           <string notr="true">QScrollBar:horizontal {
+	border: none;
+    background: rgb(16, 16, 16);
+    height: 17px;
+    margin: 2px -18 2px -18;
+}
+
+QScrollBar::handle:horizontal {
+	background-color: rgb(60, 60, 60);
+    min-height: 18px;
+	border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal:hover{	
+	background-color: rgb(70, 70, 70);
+}
+QScrollBar::handle:horizontal:pressed {	
+	background-color: rgb(79, 79, 79);
+}
+
+QScrollBar::add-line:horizontal {
+    background: none;
+    width: 26px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::add-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+
+QScrollBar::sub-line:horizontal {
+    background: none;
+    width: 26px;
+    subcontrol-position: top left;
+    subcontrol-origin: margin;
+    position: absolute;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
+/* VERTICAL SCROLLBAR */
+ QScrollBar:vertical {
+	border: none;
+    background: rgb(16, 16, 16);
+    width: 18px;
+    margin: -18px 2 -18px 2;
+	border-radius: 0px;
+ }
+
+/*  HANDLE BAR VERTICAL */
+QScrollBar::handle:vertical {	
+	background-color: rgb(60, 60, 60);
+	min-height: 18px;
+	border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover{	
+	background-color: rgb(70, 70, 70);
+}
+QScrollBar::handle:vertical:pressed {	
+	background-color: rgb(79, 79, 79);
+}
+
+/* BTN TOP - SCROLLBAR */
+QScrollBar::sub-line:vertical {
+	border: none;
+	background-color: none;
+	height: none;
+	border-top-left-radius: none;
+	border-top-right-radius: none;
+	subcontrol-position: none;
+	subcontrol-origin: none;
+}
+QScrollBar::sub-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::sub-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* BTN BOTTOM - SCROLLBAR */
+QScrollBar::add-line:vertical {
+	border: none;
+	background-color: none;
+	height: none;
+	border-bottom-left-radius: none;
+	border-bottom-right-radius: none;
+	subcontrol-position: none;
+	subcontrol-origin: none;
+}
+QScrollBar::add-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::add-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+/* COLOR */
+QListWidget {
+	background-color: rgb(0, 0, 0, 130);
+	color: rgb(240, 255, 255);
+	border-radius: 8px;
+}
+
+QListWidget {
+    show-decoration-selected: none; /* make the selection span the entire width of the view */
+	outline: none;
+}
+
+QListWidget::item:alternate {
+    background: none;
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:selected {
+    border: none;
+	color: rgb(240, 255, 255);
+	outline: none;
+}
+
+QListWidget::item:selected:!active {
+	background: none;
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:selected:active {
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:hover {
+    background: rgba(255, 255, 255, 39);
+	border: -2px solid rgb(0, 0, 0, 0);
+	border-radius: 8px;
+}</string>
           </property>
          </widget>
         </item>
@@ -280,9 +582,160 @@ border-radius: 8px;</string>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(0, 0, 0, 130);
-color: rgb(240, 255, 255);
-border-radius: 8px;</string>
+           <string notr="true">QScrollBar:horizontal {
+	border: none;
+    background: rgb(16, 16, 16);
+    height: 17px;
+    margin: 2px -18 2px -18;
+}
+
+QScrollBar::handle:horizontal {
+	background-color: rgb(60, 60, 60);
+    min-height: 18px;
+	border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal:hover{	
+	background-color: rgb(70, 70, 70);
+}
+QScrollBar::handle:horizontal:pressed {	
+	background-color: rgb(79, 79, 79);
+}
+
+QScrollBar::add-line:horizontal {
+    background: none;
+    width: 26px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::add-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+
+QScrollBar::sub-line:horizontal {
+    background: none;
+    width: 26px;
+    subcontrol-position: top left;
+    subcontrol-origin: margin;
+    position: absolute;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
+/* VERTICAL SCROLLBAR */
+ QScrollBar:vertical {
+	border: none;
+    background: rgb(16, 16, 16);
+    width: 18px;
+    margin: -18px 2 -18px 2;
+	border-radius: 0px;
+ }
+
+/*  HANDLE BAR VERTICAL */
+QScrollBar::handle:vertical {	
+	background-color: rgb(60, 60, 60);
+	min-height: 18px;
+	border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover{	
+	background-color: rgb(70, 70, 70);
+}
+QScrollBar::handle:vertical:pressed {	
+	background-color: rgb(79, 79, 79);
+}
+
+/* BTN TOP - SCROLLBAR */
+QScrollBar::sub-line:vertical {
+	border: none;
+	background-color: none;
+	height: none;
+	border-top-left-radius: none;
+	border-top-right-radius: none;
+	subcontrol-position: none;
+	subcontrol-origin: none;
+}
+QScrollBar::sub-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::sub-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* BTN BOTTOM - SCROLLBAR */
+QScrollBar::add-line:vertical {
+	border: none;
+	background-color: none;
+	height: none;
+	border-bottom-left-radius: none;
+	border-bottom-right-radius: none;
+	subcontrol-position: none;
+	subcontrol-origin: none;
+}
+QScrollBar::add-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::add-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+/* COLOR */
+QListWidget {
+	background-color: rgb(0, 0, 0, 130);
+	color: rgb(240, 255, 255);
+	border-radius: 8px;
+}
+
+QListWidget {
+    show-decoration-selected: none; /* make the selection span the entire width of the view */
+	outline: none;
+}
+
+QListWidget::item:alternate {
+    background: none;
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:selected {
+    border: none;
+	color: rgb(240, 255, 255);
+	outline: none;
+}
+
+QListWidget::item:selected:!active {
+	background: none;
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:selected:active {
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:hover {
+    background: rgba(255, 255, 255, 39);
+	border: -2px solid rgb(0, 0, 0, 0);
+	border-radius: 8px;
+}</string>
           </property>
          </widget>
         </item>
@@ -295,9 +748,160 @@ border-radius: 8px;</string>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(0, 0, 0, 130);
-color: rgb(240, 255, 255);
-border-radius: 8px;</string>
+           <string notr="true">QScrollBar:horizontal {
+	border: none;
+    background: rgb(16, 16, 16);
+    height: 17px;
+    margin: 2px -18 2px -18;
+}
+
+QScrollBar::handle:horizontal {
+	background-color: rgb(60, 60, 60);
+    min-height: 18px;
+	border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal:hover{	
+	background-color: rgb(70, 70, 70);
+}
+QScrollBar::handle:horizontal:pressed {	
+	background-color: rgb(79, 79, 79);
+}
+
+QScrollBar::add-line:horizontal {
+    background: none;
+    width: 26px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::add-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+
+QScrollBar::sub-line:horizontal {
+    background: none;
+    width: 26px;
+    subcontrol-position: top left;
+    subcontrol-origin: margin;
+    position: absolute;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
+/* VERTICAL SCROLLBAR */
+ QScrollBar:vertical {
+	border: none;
+    background: rgb(16, 16, 16);
+    width: 18px;
+    margin: -18px 2 -18px 2;
+	border-radius: 0px;
+ }
+
+/*  HANDLE BAR VERTICAL */
+QScrollBar::handle:vertical {	
+	background-color: rgb(60, 60, 60);
+	min-height: 18px;
+	border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover{	
+	background-color: rgb(70, 70, 70);
+}
+QScrollBar::handle:vertical:pressed {	
+	background-color: rgb(79, 79, 79);
+}
+
+/* BTN TOP - SCROLLBAR */
+QScrollBar::sub-line:vertical {
+	border: none;
+	background-color: none;
+	height: none;
+	border-top-left-radius: none;
+	border-top-right-radius: none;
+	subcontrol-position: none;
+	subcontrol-origin: none;
+}
+QScrollBar::sub-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::sub-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* BTN BOTTOM - SCROLLBAR */
+QScrollBar::add-line:vertical {
+	border: none;
+	background-color: none;
+	height: none;
+	border-bottom-left-radius: none;
+	border-bottom-right-radius: none;
+	subcontrol-position: none;
+	subcontrol-origin: none;
+}
+QScrollBar::add-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::add-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+/* COLOR */
+QListWidget {
+	background-color: rgb(0, 0, 0, 130);
+	color: rgb(240, 255, 255);
+	border-radius: 8px;
+}
+
+QListWidget {
+    show-decoration-selected: none; /* make the selection span the entire width of the view */
+	outline: none;
+}
+
+QListWidget::item:alternate {
+    background: none;
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:selected {
+    border: none;
+	color: rgb(240, 255, 255);
+	outline: none;
+}
+
+QListWidget::item:selected:!active {
+	background: none;
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:selected:active {
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:hover {
+    background: rgba(255, 255, 255, 39);
+	border: -2px solid rgb(0, 0, 0, 0);
+	border-radius: 8px;
+}</string>
           </property>
          </widget>
         </item>
@@ -351,25 +955,6 @@ border-radius: 8px;</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="1" rowspan="2">
-         <widget class="QLabel" name="label_11">
-          <property name="enabled">
-           <bool>true</bool>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>80</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>←
-→</string>
-          </property>
-         </widget>
-        </item>
         <item row="0" column="2">
          <widget class="QLabel" name="label_13">
           <property name="font">
@@ -399,9 +984,160 @@ border-radius: 8px;</string>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(0, 0, 0, 130);
-color: rgb(240, 255, 255);
-border-radius: 8px;</string>
+           <string notr="true">QScrollBar:horizontal {
+	border: none;
+    background: rgb(16, 16, 16);
+    height: 17px;
+    margin: 2px -18 2px -18;
+}
+
+QScrollBar::handle:horizontal {
+	background-color: rgb(60, 60, 60);
+    min-height: 18px;
+	border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal:hover{	
+	background-color: rgb(70, 70, 70);
+}
+QScrollBar::handle:horizontal:pressed {	
+	background-color: rgb(79, 79, 79);
+}
+
+QScrollBar::add-line:horizontal {
+    background: none;
+    width: 26px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::add-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+
+QScrollBar::sub-line:horizontal {
+    background: none;
+    width: 26px;
+    subcontrol-position: top left;
+    subcontrol-origin: margin;
+    position: absolute;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
+/* VERTICAL SCROLLBAR */
+ QScrollBar:vertical {
+	border: none;
+    background: rgb(16, 16, 16);
+    width: 18px;
+    margin: -18px 2 -18px 2;
+	border-radius: 0px;
+ }
+
+/*  HANDLE BAR VERTICAL */
+QScrollBar::handle:vertical {	
+	background-color: rgb(60, 60, 60);
+	min-height: 18px;
+	border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover{	
+	background-color: rgb(70, 70, 70);
+}
+QScrollBar::handle:vertical:pressed {	
+	background-color: rgb(79, 79, 79);
+}
+
+/* BTN TOP - SCROLLBAR */
+QScrollBar::sub-line:vertical {
+	border: none;
+	background-color: none;
+	height: none;
+	border-top-left-radius: none;
+	border-top-right-radius: none;
+	subcontrol-position: none;
+	subcontrol-origin: none;
+}
+QScrollBar::sub-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::sub-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* BTN BOTTOM - SCROLLBAR */
+QScrollBar::add-line:vertical {
+	border: none;
+	background-color: none;
+	height: none;
+	border-bottom-left-radius: none;
+	border-bottom-right-radius: none;
+	subcontrol-position: none;
+	subcontrol-origin: none;
+}
+QScrollBar::add-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::add-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+/* COLOR */
+QListWidget {
+	background-color: rgb(0, 0, 0, 130);
+	color: rgb(240, 255, 255);
+	border-radius: 8px;
+}
+
+QListWidget {
+    show-decoration-selected: none; /* make the selection span the entire width of the view */
+	outline: none;
+}
+
+QListWidget::item:alternate {
+    background: none;
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:selected {
+    border: none;
+	color: rgb(240, 255, 255);
+	outline: none;
+}
+
+QListWidget::item:selected:!active {
+	background: none;
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:selected:active {
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:hover {
+    background: rgba(255, 255, 255, 39);
+	border: -2px solid rgb(0, 0, 0, 0);
+	border-radius: 8px;
+}</string>
           </property>
          </widget>
         </item>
@@ -414,9 +1150,179 @@ border-radius: 8px;</string>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(0, 0, 0, 130);
-color: rgb(240, 255, 255);
-border-radius: 8px;</string>
+           <string notr="true">QScrollBar:horizontal {
+	border: none;
+    background: rgb(16, 16, 16);
+    height: 17px;
+    margin: 2px -18 2px -18;
+}
+
+QScrollBar::handle:horizontal {
+	background-color: rgb(60, 60, 60);
+    min-height: 18px;
+	border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal:hover{	
+	background-color: rgb(70, 70, 70);
+}
+QScrollBar::handle:horizontal:pressed {	
+	background-color: rgb(79, 79, 79);
+}
+
+QScrollBar::add-line:horizontal {
+    background: none;
+    width: 26px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::add-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+
+QScrollBar::sub-line:horizontal {
+    background: none;
+    width: 26px;
+    subcontrol-position: top left;
+    subcontrol-origin: margin;
+    position: absolute;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
+/* VERTICAL SCROLLBAR */
+ QScrollBar:vertical {
+	border: none;
+    background: rgb(16, 16, 16);
+    width: 18px;
+    margin: -18px 2 -18px 2;
+	border-radius: 0px;
+ }
+
+/*  HANDLE BAR VERTICAL */
+QScrollBar::handle:vertical {	
+	background-color: rgb(60, 60, 60);
+	min-height: 18px;
+	border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover{	
+	background-color: rgb(70, 70, 70);
+}
+QScrollBar::handle:vertical:pressed {	
+	background-color: rgb(79, 79, 79);
+}
+
+/* BTN TOP - SCROLLBAR */
+QScrollBar::sub-line:vertical {
+	border: none;
+	background-color: none;
+	height: none;
+	border-top-left-radius: none;
+	border-top-right-radius: none;
+	subcontrol-position: none;
+	subcontrol-origin: none;
+}
+QScrollBar::sub-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::sub-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* BTN BOTTOM - SCROLLBAR */
+QScrollBar::add-line:vertical {
+	border: none;
+	background-color: none;
+	height: none;
+	border-bottom-left-radius: none;
+	border-bottom-right-radius: none;
+	subcontrol-position: none;
+	subcontrol-origin: none;
+}
+QScrollBar::add-line:vertical:hover {	
+	background-color: none;
+}
+QScrollBar::add-line:vertical:pressed {	
+	background-color: none;
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+/* COLOR */
+QListWidget {
+	background-color: rgb(0, 0, 0, 130);
+	color: rgb(240, 255, 255);
+	border-radius: 8px;
+}
+
+QListWidget {
+    show-decoration-selected: none; /* make the selection span the entire width of the view */
+	outline: none;
+}
+
+QListWidget::item:alternate {
+    background: none;
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:selected {
+    border: none;
+	color: rgb(240, 255, 255);
+	outline: none;
+}
+
+QListWidget::item:selected:!active {
+	background: none;
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:selected:active {
+	color: rgb(240, 255, 255);
+}
+
+QListWidget::item:hover {
+    background: rgba(255, 255, 255, 39);
+	border: -2px solid rgb(0, 0, 0, 0);
+	border-radius: 8px;
+}</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" rowspan="2">
+         <widget class="QLabel" name="label_11">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>80</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>←
+→</string>
           </property>
          </widget>
         </item>
@@ -438,6 +1344,23 @@ border-radius: 8px;</string>
       <property name="verticalSpacing">
        <number>11</number>
       </property>
+      <item row="0" column="0" colspan="5">
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Название</string>
+        </property>
+       </widget>
+      </item>
       <item row="7" column="0" colspan="5">
        <widget class="QLabel" name="label_5">
         <property name="font">
@@ -469,7 +1392,6 @@ border-radius: 8px;</string>
     padding: 1px 18px 1px 3px;
     min-width: 6em;
 	color: rgb(255, 255, 255, 0);
-	
 }
 
 QComboBox:!editable, QComboBox::drop-down:editable {
@@ -500,10 +1422,11 @@ QComboBox::down-arrow:on {
 }
 
 QComboBox QAbstractItemView {
-    border: 3px solid rgb(30, 30, 30);
-    selection-background-color: rgba(85, 170, 0, 94);
+	outline: none;
+    border: 3px solid rgba(30, 30, 30);
+    selection-background-color: rgba(255, 255, 255, 39);
+	border-radius: none;
 	color: rgb(255, 255, 255);
-    border-radius: 10px;
 	background-color: rgba(59, 59, 59);
 }
 
@@ -521,16 +1444,6 @@ QComboBox:on {
           <height>24</height>
          </size>
         </property>
-        <item>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normalon>res/icon/acacia_trapdoor.png</normalon>
-          </iconset>
-         </property>
-        </item>
        </widget>
       </item>
       <item row="3" column="0" colspan="2">
@@ -554,7 +1467,6 @@ QComboBox:on {
     padding: 1px 18px 1px 3px;
     min-width: 6em;
 	color: rgb(255, 255, 255);
-	
 }
 
 QComboBox:!editable, QComboBox::drop-down:editable {
@@ -585,10 +1497,11 @@ QComboBox::down-arrow:on {
 }
 
 QComboBox QAbstractItemView {
-    border: 3px solid rgb(30, 30, 30);
-    selection-background-color: rgba(85, 170, 0, 94);
+	outline: none;
+    border: 3px solid rgba(30, 30, 30);
+    selection-background-color: rgba(255, 255, 255, 39);
+	border-radius: none;
 	color: rgb(255, 255, 255);
-    border-radius: 10px;
 	background-color: rgba(59, 59, 59);
 }
 
@@ -623,7 +1536,6 @@ QComboBox:on {
     padding: 1px 18px 1px 3px;
     min-width: 6em;
 	color: rgb(255, 255, 255);
-	
 }
 
 QComboBox:!editable, QComboBox::drop-down:editable {
@@ -654,10 +1566,11 @@ QComboBox::down-arrow:on {
 }
 
 QComboBox QAbstractItemView {
-    border: 3px solid rgb(30, 30, 30);
-    selection-background-color: rgba(85, 170, 0, 94);
+	outline: none;
+    border: 3px solid rgba(30, 30, 30);
+    selection-background-color: rgba(255, 255, 255, 39);
+	border-radius: none;
 	color: rgb(255, 255, 255);
-    border-radius: 10px;
 	background-color: rgba(59, 59, 59);
 }
 
@@ -756,23 +1669,6 @@ border-radius: 6px;</string>
         </property>
         <property name="text">
          <string>Версия</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0" colspan="5">
-       <widget class="QLabel" name="label_3">
-        <property name="font">
-         <font>
-          <pointsize>9</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>Название</string>
         </property>
        </widget>
       </item>
