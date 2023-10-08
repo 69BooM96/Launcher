@@ -1126,6 +1126,67 @@ class Ui_MainWindow(object):
         self.gridLayout_5.setHorizontalSpacing(4)
         self.gridLayout_5.setVerticalSpacing(11)
         self.gridLayout_5.setObjectName("gridLayout_5")
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_5.addItem(spacerItem, 8, 0, 1, 1)
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setMinimumSize(QtCore.QSize(96, 35))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton.setFont(font)
+        self.pushButton.setStyleSheet("color: rgb(240, 255, 255);\n"
+"background-color: rgba(85, 170, 0, 94);\n"
+"border-radius: 6px;")
+        self.pushButton.setObjectName("pushButton")
+        self.gridLayout_5.addWidget(self.pushButton, 9, 0, 1, 1)
+        self.label_14 = QtWidgets.QLabel(self.centralwidget)
+        self.label_14.setMinimumSize(QtCore.QSize(5, 0))
+        self.label_14.setStyleSheet("background-color: rgba(0, 0, 0, 0);")
+        self.label_14.setText("")
+        self.label_14.setObjectName("label_14")
+        self.gridLayout_5.addWidget(self.label_14, 7, 3, 1, 1)
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_2.setFont(font)
+        self.label_2.setStyleSheet("color: rgb(255, 255, 255);")
+        self.label_2.setObjectName("label_2")
+        self.gridLayout_5.addWidget(self.label_2, 2, 0, 1, 5)
+        self.label_15 = QtWidgets.QLabel(self.centralwidget)
+        self.label_15.setMinimumSize(QtCore.QSize(35, 0))
+        self.label_15.setStyleSheet("background-color: rgba(0, 0, 0, 0);")
+        self.label_15.setText("")
+        self.label_15.setObjectName("label_15")
+        self.gridLayout_5.addWidget(self.label_15, 7, 2, 1, 1)
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setMinimumSize(QtCore.QSize(96, 35))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_2.setFont(font)
+        self.pushButton_2.setStyleSheet("color: rgb(240, 255, 255);\n"
+"background-color: rgba(170, 0, 0, 124);\n"
+"border-radius: 6px;")
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.gridLayout_5.addWidget(self.pushButton_2, 9, 1, 1, 2)
+        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lineEdit.setFont(font)
+        self.lineEdit.setStyleSheet("background-color: rgba(49, 49, 49);\n"
+"border-radius: 10px;\n"
+"color: rgb(230, 230, 230);")
+        self.lineEdit.setText("")
+        self.lineEdit.setAlignment(QtCore.Qt.AlignCenter)
+        self.lineEdit.setObjectName("lineEdit")
+        self.gridLayout_5.addWidget(self.lineEdit, 1, 0, 1, 3)
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
         font.setPointSize(9)
@@ -1143,7 +1204,7 @@ class Ui_MainWindow(object):
         self.label_5.setFont(font)
         self.label_5.setStyleSheet("color: rgb(255, 255, 255);")
         self.label_5.setObjectName("label_5")
-        self.gridLayout_5.addWidget(self.label_5, 7, 0, 1, 5)
+        self.gridLayout_5.addWidget(self.label_5, 5, 0, 1, 5)
         self.comboBox_3 = QtWidgets.QComboBox(self.centralwidget)
         self.comboBox_3.setMinimumSize(QtCore.QSize(99, 30))
         self.comboBox_3.setStyleSheet("/* VERTICAL SCROLLBAR */\n"
@@ -1236,7 +1297,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QComboBox::down-arrow {\n"
-"    image: url(res/open.png);\n"
+"    image: url(C:/Users/студент.BestLaptop-ПК/Desktop/лаунчер/res/open.png);\n"
 "}\n"
 "\n"
 "QComboBox::down-arrow:on {\n"
@@ -1262,137 +1323,9 @@ class Ui_MainWindow(object):
 "}")
         self.comboBox_3.setIconSize(QtCore.QSize(39, 24))
         self.comboBox_3.setObjectName("comboBox_3")
-        self.gridLayout_5.addWidget(self.comboBox_3, 9, 0, 1, 2)
-        self.comboBox = QtWidgets.QComboBox(self.centralwidget)
-        self.comboBox.setMinimumSize(QtCore.QSize(99, 30))
-        font = QtGui.QFont()
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.comboBox.setFont(font)
-        self.comboBox.setStyleSheet("/* VERTICAL SCROLLBAR */\n"
-" QScrollBar:vertical {\n"
-"    border: none;\n"
-"    background: rgb(16, 16, 16);\n"
-"    width: 14px;\n"
-"    margin: -4px 2 -4px 2;\n"
-"    border-radius: 0px;\n"
-" }\n"
-"\n"
-"/*  HANDLE BAR VERTICAL */\n"
-"QScrollBar::handle:vertical {    \n"
-"    background-color: rgb(60, 60, 60);\n"
-"    min-height: 18px;\n"
-"    border-radius: 5px;\n"
-"}\n"
-"QScrollBar::handle:vertical:hover{    \n"
-"    background-color: rgb(70, 70, 70);\n"
-"}\n"
-"QScrollBar::handle:vertical:pressed {    \n"
-"    background-color: rgb(79, 79, 79);\n"
-"}\n"
-"\n"
-"/* BTN TOP - SCROLLBAR */\n"
-"QScrollBar::sub-line:vertical {\n"
-"    border: none;\n"
-"    background-color: none;\n"
-"    height: none;\n"
-"    border-top-left-radius: none;\n"
-"    border-top-right-radius: none;\n"
-"    subcontrol-position: none;\n"
-"    subcontrol-origin: none;\n"
-"}\n"
-"QScrollBar::sub-line:vertical:hover {    \n"
-"    background-color: none;\n"
-"}\n"
-"QScrollBar::sub-line:vertical:pressed {    \n"
-"    background-color: none;\n"
-"}\n"
-"\n"
-"/* BTN BOTTOM - SCROLLBAR */\n"
-"QScrollBar::add-line:vertical {\n"
-"    border: none;\n"
-"    background-color: none;\n"
-"    height: none;\n"
-"    border-bottom-left-radius: none;\n"
-"    border-bottom-right-radius: none;\n"
-"    subcontrol-position: none;\n"
-"    subcontrol-origin: none;\n"
-"}\n"
-"QScrollBar::add-line:vertical:hover {    \n"
-"    background-color: none;\n"
-"}\n"
-"QScrollBar::add-line:vertical:pressed {    \n"
-"    background-color: none;\n"
-"}\n"
-"\n"
-"/* RESET ARROW */\n"
-"QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {\n"
-"    background: none;\n"
-"}\n"
-"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
-"    background: none;\n"
-"}\n"
-"\n"
-"QComboBox {\n"
-"    border-radius: 10px;\n"
-"    padding: 1px 18px 1px 3px;\n"
-"    min-width: 6em;\n"
-"    color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QComboBox:!editable, QComboBox::drop-down:editable {\n"
-"    background-color: rgba(0, 0, 0, 80);\n"
-"}\n"
-"\n"
-"QComboBox:!editable:on, QComboBox::drop-down:editable:on {\n"
-"    background-color: rgba(49, 49, 49, 140);\n"
-"}\n"
-"\n"
-"QComboBox::drop-down {\n"
-"    subcontrol-origin: padding;\n"
-"    subcontrol-position: top right;\n"
-"    width: 15px;\n"
-"    border-left-color: darkgray;\n"
-"    border-left-style: solid;\n"
-"    border-top-right-radius: 3px;\n"
-"    border-bottom-right-radius: 3px;\n"
-"}\n"
-"\n"
-"QComboBox::down-arrow {\n"
-"    image: url(res/open.png);\n"
-"}\n"
-"\n"
-"QComboBox::down-arrow:on {\n"
-"    top: 0px;\n"
-"    left: 0px;\n"
-"}\n"
-"\n"
-"QComboBox QAbstractItemView {\n"
-"    outline: none;\n"
-"    border: 3px solid rgba(30, 30, 30);\n"
-"    selection-background-color: rgba(255, 255, 255, 20);\n"
-"    border-radius: 0px;\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgba(59, 59, 59);\n"
-"}\n"
-"\n"
-"QComboBox:editable {\n"
-"    background-color: rgb(30, 30, 30);\n"
-"}\n"
-"\n"
-"QComboBox:on {\n"
-"    padding-bottom: 5px;\n"
-"}")
-        self.comboBox.setObjectName("comboBox")
-        self.gridLayout_5.addWidget(self.comboBox, 3, 0, 1, 2)
+        self.gridLayout_5.addWidget(self.comboBox_3, 7, 0, 1, 2)
         self.comboBox_2 = QtWidgets.QComboBox(self.centralwidget)
         self.comboBox_2.setMinimumSize(QtCore.QSize(99, 30))
-        font = QtGui.QFont()
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.comboBox_2.setFont(font)
         self.comboBox_2.setStyleSheet("/* VERTICAL SCROLLBAR */\n"
 " QScrollBar:vertical {\n"
 "    border: none;\n"
@@ -1461,7 +1394,8 @@ class Ui_MainWindow(object):
 "    border-radius: 10px;\n"
 "    padding: 1px 18px 1px 3px;\n"
 "    min-width: 6em;\n"
-"    color: rgb(255, 255, 255);\n"
+"    color: rgb(255, 255, 255, 255);\n"
+"\n"
 "}\n"
 "\n"
 "QComboBox:!editable, QComboBox::drop-down:editable {\n"
@@ -1483,7 +1417,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QComboBox::down-arrow {\n"
-"    image: url(res/open.png);\n"
+"    image: url(C:/Users/студент.BestLaptop-ПК/Desktop/лаунчер/res/open.png);\n"
 "}\n"
 "\n"
 "QComboBox::down-arrow:on {\n"
@@ -1508,77 +1442,7 @@ class Ui_MainWindow(object):
 "    padding-bottom: 5px;\n"
 "}")
         self.comboBox_2.setObjectName("comboBox_2")
-        self.gridLayout_5.addWidget(self.comboBox_2, 5, 0, 1, 2)
-        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_5.addItem(spacerItem, 10, 0, 1, 1)
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setMinimumSize(QtCore.QSize(96, 35))
-        font = QtGui.QFont()
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton.setFont(font)
-        self.pushButton.setStyleSheet("color: rgb(240, 255, 255);\n"
-"background-color: rgba(85, 170, 0, 94);\n"
-"border-radius: 6px;")
-        self.pushButton.setObjectName("pushButton")
-        self.gridLayout_5.addWidget(self.pushButton, 11, 0, 1, 1)
-        self.label_14 = QtWidgets.QLabel(self.centralwidget)
-        self.label_14.setMinimumSize(QtCore.QSize(5, 0))
-        self.label_14.setStyleSheet("background-color: rgba(0, 0, 0, 0);")
-        self.label_14.setText("")
-        self.label_14.setObjectName("label_14")
-        self.gridLayout_5.addWidget(self.label_14, 9, 3, 1, 1)
-        self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        font = QtGui.QFont()
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_4.setFont(font)
-        self.label_4.setStyleSheet("color: rgb(255, 255, 255);")
-        self.label_4.setObjectName("label_4")
-        self.gridLayout_5.addWidget(self.label_4, 4, 0, 1, 5)
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        font = QtGui.QFont()
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_2.setFont(font)
-        self.label_2.setStyleSheet("color: rgb(255, 255, 255);")
-        self.label_2.setObjectName("label_2")
-        self.gridLayout_5.addWidget(self.label_2, 2, 0, 1, 5)
-        self.label_15 = QtWidgets.QLabel(self.centralwidget)
-        self.label_15.setMinimumSize(QtCore.QSize(35, 0))
-        self.label_15.setStyleSheet("background-color: rgba(0, 0, 0, 0);")
-        self.label_15.setText("")
-        self.label_15.setObjectName("label_15")
-        self.gridLayout_5.addWidget(self.label_15, 9, 2, 1, 1)
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setMinimumSize(QtCore.QSize(96, 35))
-        font = QtGui.QFont()
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_2.setFont(font)
-        self.pushButton_2.setStyleSheet("color: rgb(240, 255, 255);\n"
-"background-color: rgba(170, 0, 0, 124);\n"
-"border-radius: 6px;")
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.gridLayout_5.addWidget(self.pushButton_2, 11, 1, 1, 2)
-        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit.setMinimumSize(QtCore.QSize(0, 25))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.lineEdit.setFont(font)
-        self.lineEdit.setStyleSheet("background-color: rgba(49, 49, 49);\n"
-"border-radius: 10px;\n"
-"color: rgb(230, 230, 230);")
-        self.lineEdit.setText("")
-        self.lineEdit.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit.setObjectName("lineEdit")
-        self.gridLayout_5.addWidget(self.lineEdit, 1, 0, 1, 3)
+        self.gridLayout_5.addWidget(self.comboBox_2, 3, 0, 1, 2)
         self.gridLayout.addLayout(self.gridLayout_5, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -1601,12 +1465,11 @@ class Ui_MainWindow(object):
         self.label_13.setText(_translate("MainWindow", "Моды"))
         self.label_11.setText(_translate("MainWindow", "←\n"
 "→"))
-        self.label_3.setText(_translate("MainWindow", "Название"))
-        self.label_5.setText(_translate("MainWindow", "Иконка"))
         self.pushButton.setText(_translate("MainWindow", "Создать"))
-        self.label_4.setText(_translate("MainWindow", "Цвет"))
         self.label_2.setText(_translate("MainWindow", "Версия"))
         self.pushButton_2.setText(_translate("MainWindow", "Отмена"))
+        self.label_3.setText(_translate("MainWindow", "Название"))
+        self.label_5.setText(_translate("MainWindow", "Иконка"))
 
 
 if __name__ == "__main__":

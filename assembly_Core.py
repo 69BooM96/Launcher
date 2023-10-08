@@ -9,6 +9,7 @@ import zipfile
 import os
 import shutil
 import assembly
+import minecraft_launcher_lib
 
 class ExampleApp(QtWidgets.QMainWindow, assembly.Ui_MainWindow):
     def __init__(self):
@@ -18,6 +19,7 @@ class ExampleApp(QtWidgets.QMainWindow, assembly.Ui_MainWindow):
         self.update_shader_list()
         self.update_texture_list()
         self.icons()
+        self.version()
         self.pushButton.clicked.connect(self.create_assembly)
         self.pushButton_2.clicked.connect(self.cancellation)
         self.listWidget_5.clicked.connect(self.mod_assembly_on)
@@ -27,10 +29,14 @@ class ExampleApp(QtWidgets.QMainWindow, assembly.Ui_MainWindow):
         self.listWidget.clicked.connect(self.shader_assembly_on)
         self.listWidget_2.clicked.connect(self.shader_assembly_off)
 
-    def icons(self):
-        print()
 
-        #self.comboBox_3.addItems(["qwer"])
+    def version(self):
+        for version in minecraft_launcher_lib.utils.get_installed_versions(minecraft_directory=".minecraft"):
+            icon3 = QtGui.QIcon()
+            icon3.addPixmap(QtGui.QPixmap(f"res/version2.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+            self.comboBox_2.addItem(icon3, version["id"])
+
+    def icons(self):
         update = os.listdir("res/icon/")
         for icon_list in update:
             icon3 = QtGui.QIcon()
@@ -107,14 +113,12 @@ class ExampleApp(QtWidgets.QMainWindow, assembly.Ui_MainWindow):
     def create_assembly(self):
         print("creat")
         name = self.lineEdit.text()
-        version = self.comboBox.currentText()
-        color = self.comboBox_2.currentText()
+        version = self.comboBox_2.currentText()
         icon = self.comboBox_3.currentIndex()
 
         file = open(f'minecraft/assembly/{name}.assembly', mode='w', encoding='utf-8')
         file.write("name:" + f"{name}\n")
         file.write("version:" + f"{version}\n")
-        file.write("color:" + f"{color}\n")
         file.write("icon:" + f"{icon}\n")
         file.write("mods:[\n")
         for i in range(self.listWidget_6.count()):

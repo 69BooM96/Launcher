@@ -1,3 +1,4 @@
+import minecraft_launcher_lib
 import subprocess
 import sys
 from pathlib import Path
@@ -8,7 +9,6 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import zipfile
 import os
 import shutil
-
 import launcher
 
 class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
@@ -17,35 +17,138 @@ class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
         self.setupUi(self)
         self.pushButton_2.clicked.connect(self.settings)
         self.pushButton_3.clicked.connect(self.open_folder)
-        self.radioButton.clicked.connect(self.white)
-        self.radioButton_2.clicked.connect(self.dark)
         self.pushButton_7.clicked.connect(self.texture)
         self.pushButton_8.clicked.connect(self.shaders)
         self.pushButton_6.clicked.connect(self.mods)
-        self.pushButton_19.clicked.connect(self.open_jar)
-        self.pushButton_18.clicked.connect(self.delete_jar)
-        self.pushButton_17.clicked.connect(self.delete_jar)
+        self.pushButton_19.clicked.connect(self.assembly)
+        self.pushButton_17.clicked.connect(self.update_mod_list2)
         self.pushButton_10.clicked.connect(self.assembly)
         self.pushButton_11.clicked.connect(self.update_mod_list)
         self.pushButton_9.clicked.connect(self.delete_jar)
+        self.pushButton_21.clicked.connect(self.open_jar)
+        self.pushButton_24.clicked.connect(self.update_mod_list)
+        self.pushButton_4.clicked.connect(self.start_g)
+        self.pushButton_15.clicked.connect(self.create_account)
+        self.listWidget_3.clicked.connect(self.connect_assembly)
+        self.listWidget_3.doubleClicked.connect(self.start_assembly)
+
         self.update_mod_list()
         self.update_mod_list2()
-        self.start_g()
+        self.version()
+        self.account()
+
+
+    def start_assembly(self):
+        item = self.listWidget_3.currentItem()
+        file = open("version.info", mode="w")
+        file.write(item.text())
+        file.close()
+        print(item.text())
+
+        file = open("settings.stg", "r")
+        files = file.read()
+        file2 = open("settings.stg", "w")
+        files = files.replace("assembly=false", "assembly=true")
+        file2.write(files)
+        file2.close()
+        file.close()
+        os.startfile("Download_Core.py")
+
+    def connect_assembly(self):
+        item = self.listWidget_3.currentItem()
+        file = open("version.info", mode="w")
+        file.write("minecraft/assembly/" + item.text())
+        file.close()
+        self.mods()
 
     def start_g(self):
-        None
+        version = self.comboBox_2.currentText()
+        username = self.comboBox_3.currentText()
+
+        file = open("version.info", mode="w")
+        file.write(version)
+        file.close()
+        file2 = open("username.info", mode="w")
+        file2.write(username)
+        file2.close()
+        file = open("settings.stg", "r")
+        files = file.read()
+        file2 = open("settings.stg", "w")
+        files = files.replace("assembly=true", "assembly=false")
+        file2.write(files)
+        file2.close()
+        file.close()
+        os.startfile("Download_Core.py")
+
+
+    def account(self):
+        file = open('user.info', mode='r')
+        for username in file:
+            username2 = username.replace("\n", "")
+            self.comboBox_3.addItem(username2)
+
+    def create_account(self):
+        os.startfile("account_Core.py")
+
+    def version(self):
+        for version in minecraft_launcher_lib.utils.get_installed_versions(minecraft_directory=".minecraft"):
+            icon3 = QtGui.QIcon()
+            icon3.addPixmap(QtGui.QPixmap(f"res/version2.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+            self.comboBox_2.addItem(icon3, version["id"])
 
     def assembly(self):
         os.startfile("assembly_Core.py")
 
     def shaders(self):
         self.label_6.setText("Шейдеры")
+        self.listWidget_2.clear()
+        file2 = open("version.info", "r")
+        assembly_s = file2.read()
+        file = open(assembly_s, "r")
+        for files in file:
+            if files == "shaders:[\n":
+                for files2 in file:
+                    if files2 == "]":
+                        break
+                    files2 = files2.replace("\n", "")
+                    self.listWidget_2.addItem(files2)
+
+        file.close()
+        file2.close()
 
     def texture(self):
         self.label_6.setText("Текстуры")
+        self.listWidget_2.clear()
+        file2 = open("version.info", "r")
+        assembly_s = file2.read()
+        file = open(assembly_s, "r")
+        for files in file:
+            if files == "textures:[\n":
+                for files2 in file:
+                    if files2 == "]\n":
+                        break
+                    files2 = files2.replace("\n", "")
+                    self.listWidget_2.addItem(files2)
+
+        file.close()
+        file2.close()
 
     def mods(self):
         self.label_6.setText("Моды")
+        self.listWidget_2.clear()
+        file2 = open("version.info", "r")
+        assembly_s = file2.read()
+        file = open(assembly_s, "r")
+        for files in file:
+            if files == "mods:[\n":
+                for files2 in file:
+                    if files2 == "]\n":
+                        break
+                    files2 = files2.replace("\n", "")
+                    self.listWidget_2.addItem(files2)
+
+        file.close()
+        file2.close()
 
     def open_jar(self):
         input_file = easygui.fileopenbox(title='Import file',default='*',filetypes=["*.jar", "*.zip"])
@@ -141,9 +244,8 @@ class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
 
 
     def update_mod_list2(self):
-        self.listWidget_3.doubleClicked.connect(self.delete_jar)
         self.listWidget_3.clear()
-        update = os.listdir("minecraft/mods")
+        update = os.listdir("minecraft/assembly")
         for mod_list in update:
             self.listWidget_3.addItem(mod_list)
 
@@ -162,7 +264,7 @@ class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
                                          "background-color: rgba(0, 0, 0, 0);")
         self.pushButton_2.setStyleSheet("color: rgb(240, 255, 255);\n"
                                          "background-color: rgba(0, 0, 0, 0);")
-        self.pushButton_15.setStyleSheet("border: 12px solid rgba(49, 49, 49);"
+        self.pushButton_15.setStyleSheet("border: 10px solid rgba(49, 49, 49);"
                                          "background-color: rgba(255, 255, 255, 0);"
                                          "border-radius: 30px;")
         self.label_2.setStyleSheet("color: rgb(255, 255, 255);\n"
@@ -179,7 +281,7 @@ class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
                                      "    color: rgb(249, 249, 249);\n"
                                      "    background-color: qlineargradient(spread:pad, x1:0, y1:1, stop:0.01 rgb(30, 147, 10), stop:0.15 rgba(255, 255, 255, 0));\n"
                                      "}")
-        self.comboBox.setStyleSheet("QComboBox {\n"
+        self.comboBox_3.setStyleSheet("QComboBox {\n"
                                     "    border-radius: 3px;\n"
                                     "    padding: 1px 18px 1px 3px;\n"
                                     "    min-width: 6em;\n"
@@ -230,12 +332,12 @@ class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
                                          "background-color: rgba(0, 0, 0, 0);")
         self.pushButton_2.setStyleSheet("color: rgb(4, 5, 5);\n"
                                         "background-color: rgba(0, 0, 0, 0);")
-        self.pushButton_15.setStyleSheet("border: 12px solid rgba(235, 235, 235);"
+        self.pushButton_15.setStyleSheet("border: 10px solid rgba(235, 235, 235);"
                                          "background-color: rgba(255, 255, 255, 0);"
                                          "border-radius: 30px;")
         self.label_2.setStyleSheet("color: rgb(0, 0, 0);\n"
                                    "background-color: rgb(215, 215, 215);")
-        self.comboBox.setStyleSheet("QComboBox {\n"
+        self.comboBox_3.setStyleSheet("QComboBox {\n"
                                     "    border-radius: 3px;\n"
                                     "    padding: 1px 18px 1px 3px;\n"
                                     "    min-width: 6em;\n"
@@ -287,7 +389,7 @@ class ExampleApp(QtWidgets.QMainWindow, launcher.Ui_MainWindow):
 
     def settings(self):
         #Start
-        print("x")
+        os.startfile('settings_Core.py')
 
     def open_folder(self):
         directory = r".."
