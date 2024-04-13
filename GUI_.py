@@ -3233,7 +3233,7 @@ class Ui_MainWindow(object):
         self.tabWidget_4.addTab(self.tab_14, "")
         self.gridLayout_36.addWidget(self.tabWidget_4, 0, 0, 1, 1)
         self.frame_23 = QtWidgets.QFrame(self.page_5)
-        self.frame_23.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_23.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_23.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_23.setObjectName("frame_23")
         self.gridLayout_42 = QtWidgets.QGridLayout(self.frame_23)
